@@ -7,7 +7,7 @@ In 2013, Lahcene Merah and all, demonstrate by mixing to chaotic map they can in
 
 %%%%%%%%%%%%%%
 Non-Linear Chaotic Dynamic
-In 2013 Hariprasad and NagaDeepa, the authors demonstrating using the reseeding technique to avoid non-lineair chaotic PRNG as short-period problems, and that by mixing Resseding module with a non-linear chaotic logistic map (CLM) using a vector mixer module based on linear generator. For eche fixed point codition by comparing the Xi and Xi-1 sequence of the CLM we increase the ressding period until it reashed, and pass every secuse to vector mixing to
+In 2013 Hariprasad and NagaDeepa, the authors demonstrating using the reseeding technique to avoid non-lineair chaotic PRNG as short-period problems, and that by mixing Reseeding module with a non-linear chaotic logistic map (CLM) using a vector mixer module based on auxiliary linear generator ALG. For each fixed point condition by comparing the Xt and Xt+1 sequence of the CLM we increase the reseeding period until it reached, and then pass the result Xt+1 sequence to vector mixing to generate the final output bu XORing it with ALG (Yt+1) OUTt+1=Xt+1[1:31] XOR Yt+1[1:31].
 
 In 2011, Pawel Dabal, Ryszard Pelka. This paper presents results of studies on the implementation of pseudo-random bit generators based on a nonlinear dynamic chaotic system. Design of chaotic PRNG: The logistic function generator was designed using MATLAB/Simulink with System Generator tool which offers ready to use library of fixed-point arithmetic blocks, that can be directly implemented into the FPGA device. In both cases we need a multiplier and a subtraction block. The multiplier unit was built using DSP48E blocks that can perform 18x25 multiplication.
 

@@ -1,1 +1,18 @@
-Start
+PLL:
+In 2008 Michal Varchola and al, To demonstrate advantages of this platform a TRNG based on internal PLL was implemented, but TRNGs based on other principles can be also tested. Great advantage of Actel Fusion FPGA is the possibility to create whole system with on-chip analog measurements. The basic principle behind the TRNG shown in Fig. 3 is to extract the randomness from the jitter of the clock signals synthesized in the embedded analog PLLs [2]. The jitter is detected by the sampling of a reference signal CLJ using a rationally related (clock) signal CLK synthesized in the on-chip analog PLLs with frequencies. It was observed that 16-bit data could be transmitted each 2 periods of CopreMP7 system clock by ModelSim simulation.Two configurations of TRNG have been tested operating at following bit-rates - 40 kbps and 1 Mbps. Slower 40 kbps TRNG pass the test very well but faster 1 Mbps does not
+
+In 2011 Martin Simka and al, In the paper we analyze behavior of the Phase-Locked Loop (PLL) based TRNG in changing working environment. The frequency of signals synthesized by PLL may be naturally influenced by chip temperature. We show what impact the temperature has on the quality of generated random sequence of the PLL-based TRNG. When considering PLL as a source of randomness, three parameters have to be taken into account: 1) the size of generated clock jitter; 2) available ranges of frequency dividers n, m and k together with the VCO maximum and minimum frequency; 3) bandwidth of the PLL loop filter. We can conclude that lower bandwidth of the feedback PLL loop in the configuration B causes higher number of the critical samples. This can be explained by the fact that lower bandwidth decreases PLL output jitter and thus increases the tracking jitter. 
+
+%%%%%%
+RO:
+In 2006 Drie Schellekens and al, a review on Ring oxialltor definition [6][7]
+
+In 2009 Cristian Klein and al, This paper focuses on the design and implementation of a high-quality and high-throughput true-random number generator (TRNG) in FPGA. Our first attempt was to create a TRNG based on [3], which uses one RO to sample the output of the other RO. We appreciated this approach due to the fact that the whole stream before the post-processing phase is random (although it might be biased a little bit). A post-processing phase is required which consists in a resilience function. A single inverter allows us to create ROs which both even and odd number of latches. To make sure that the inverter does not add more delay the inverter and the first latch are mapped to the same CLB. we chose as the resilience function a simple XOR of 2r-bits. increases the output period of the ring oscillators, it also increases the amount of jitter.
+
+%%%%%
+STR:
+
+In 2013 Abdelkarim Cherkaoui and al, The proposed true random number generator (TRNG) exploits the jitter of events propagating in a self-timed ring (STR) to generate random bit sequences at a very high bit rate. the stochastic models are not feasible or at least not plausible, because they combine intrinsically pseudo randomness with true randomness. In [9], we showed for the rst time that self-timed rings (STR) are a highly suitable source of entropy. Based on these observations, in [10] we proposed the first TRNG principle based on STRs. Self-timed rings (STR) are oscillators that can provide events which are evenly spaced in time and distributed over half an oscillation period of one ring stage. Contrary to inverter ring oscillators, several events can propagate simultaneously in STRs thanks to the asynchronous hand- shake protocol. The signals resulting from the STR outputs are synchronized and their mutual position does not change over time. In contrast, the ring oscillator output signals from [7] drift in time and generate pseudo-randomness.
+
+%%%%
+metastability:
